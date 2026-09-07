@@ -2,9 +2,9 @@ const PetList = (props) => {
   console.log(props);
 
   return (
-    <div>
-      <h1>Pet List</h1>
-      <div>
+    <div className="sidebar-container">
+      < h1 > Pet List</h1 >
+      <div className="list-container">
         {!props.pets.length ? (
           <h2>No Pets Yet!</h2>
         ) : (
@@ -25,7 +25,7 @@ const PetList = (props) => {
       <button onClick={props.handleFormView}>
         {props.isFormOpen ? 'Close Form' : 'New Pet'}
       </button>
-    </div>
+    </div >
   );
 };
 
