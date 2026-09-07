@@ -15,9 +15,14 @@ const PetForm = (props) => {
     });
   };
 
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    props.handleAddPet(formData);
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name"> Name </label>
         <input
           id="name"
